@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+    /*dark*/
+    --color-accent: #64b9e4;
+    --color-accent-hover: #8cc8ea;
+
+    --color-accent-muted: #9ed0ed;
+    --color-accent-muted-hover: #79c1e7;
+
+    --color-text-base: #FEFEFE;
+    --color-text-muted: #aeaeae;
+
+    --color-base: #12161d;
+    --color-muted: #282b32;
+
+    --color-fill: #3f4248;
+    --color-fill-secondary: #282b32;
+}
+
+@media (prefers-color-scheme: light) {
+    .background {
+        background-color: #12161D;
+        background-image: url("../images/bg-light.svg");
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .background {
+        background-color: #12161D;
+        background-image: url("../images/bg.svg");
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+
+.button {
+    @apply text-black rounded-xl px-4 py-2 border-2 border-[var(--color-accent-muted)] hover:border-[var(--color-accent-muted-hover)] bg-[var(--color-accent-muted)] hover:bg-[var(--color-accent-muted-hover)] transition-all shadow
+}
+
+.button-alt {
+    @apply text-black rounded-xl px-4 py-2 transition-all shadow border-2 border-[var(--color-accent)] hover:border-[var(--color-accent-hover)] hover:rounded-sm focus-within:rounded-sm dark:text-[var(--color-text-base)]
+}
+
+.button-accent {
+    @apply text-black rounded-xl px-4 py-2 border-2 border-[var(--color-accent)] hover:border-[var(--color-accent-hover)] bg-[var(--color-accent)] hover:bg-[var(--color-accent-hover)] transition-all shadow
+}
+
+.input {
+    @apply mt-1 w-full rounded-md border border-zinc-600 shadow-xs py-2 px-3 outline-none bg-slate-200 dark:bg-[var(--color-fill-secondary)]
+}
+
+.label {
+    @apply block text-sm font-medium
+}

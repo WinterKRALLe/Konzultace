@@ -1,0 +1,22 @@
+{
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.28",
+        "thenetworg/oauth2-azure": "^2.2",
+        "microsoft/microsoft-graph": "^2.26",
+        "guzzlehttp/guzzle": "^7.9",
+      "ext-pdo": "*"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true,
+            "tbachert/spi": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Database\\": "config/",
+            "Helpers\\": "Helpers/",
+            "Services\\": "Services/"
+        }
+    }
+}
