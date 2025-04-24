@@ -10,10 +10,13 @@ class SessionService
     private PDO $conn;
     private string $table = "theses_sessions";
 
-    public function __construct()
+    public function __construct(PDO $connection = null)
     {
-        $database = new Database();
-        $this->conn = $database->getConnection();
+        if ($connection === null) {
+            $database = new Database();
+            $connection = $database->getConnection();
+        }
+        $this->conn = $connection;
     }
 
     public function createSession($student, $thesisType, $sessionType, $date, $length, $notes, $notes_next): bool
