@@ -20,7 +20,6 @@ $routes = [
     'home' => __DIR__ . '/public/pages/home.php',
     'handle_session' => __DIR__ . '/public/pages/handle_session.php',
     'admin' => __DIR__ . '/public/pages/admin.php',
-    'unauthorized' => __DIR__ . '/public/pages/unauthorized.php',
 ];
 
 if (isset($routes[$route]) && file_exists($routes[$route])) {

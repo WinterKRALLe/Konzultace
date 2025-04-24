@@ -13,7 +13,7 @@ if (!isset($_SESSION['user_profile'])) {
     exit;
 }
 
-RoleAccess::checkRoleAccess();
+// RoleAccess::checkRoleAccess();
 if (!RoleAccess::checkNameAccess()) {
     http_response_code(403);
     exit('Nemáš oprávnění k přístupu. <a href="/">Domů</a>');

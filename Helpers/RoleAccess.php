@@ -11,17 +11,6 @@ class RoleAccess
     /**
      * Zkontroluje přístup k celé stránce a přesměruje v případě nedostatečných práv
      */
-    public static function checkRoleAccessAll($allowedRoles = ['admin', 'utb_zam', 'utb_stu']): void
-    {
-        if (!self::hasRoleAccess($allowedRoles)) {
-            header('Location: /unauthorized');
-            exit();
-        }
-    }
-
-    /**
-     * Zkontroluje přístup k celé stránce a přesměruje v případě nedostatečných práv
-     */
     public static function checkRoleAccess($allowedRoles = ['admin', 'utb_zam']): void
     {
         if (!self::hasRoleAccess($allowedRoles)) {
@@ -53,10 +42,8 @@ class RoleAccess
     /**
      * Zkontroluje, zda má uživatel přístup na základě povolených jmen.
      */
-    public static function checkNameAccess(): bool
+    public static function checkNameAccess(array $allowedNames = ['Jindřich Caletka', 'Pavla Habrovanská', 'Jana Přílučíková', 'Šárka Juříková', 'Eva Kadlečková', 'Yvona Žáčková', 'Bronislava Neubauerová']): bool
     {
-        $allowedNames = require 'config/allowed_names.php';
-
         if (!isset($_SESSION['user_profile']['name']) || !in_array($_SESSION['user_profile']['name'], $allowedNames, true)) {
             return false;
         }

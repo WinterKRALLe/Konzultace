@@ -1,6 +1,5 @@
 <?php
 
-use Helpers\RoleAccess;
 use Helpers\SessionTypes;
 use Helpers\ThesisTypes;
 use Services\SessionService;
@@ -9,8 +8,6 @@ require "vendor/autoload.php";
 
 // Kontrola přihlášení a přístupu
 if (isset($_SESSION['user_profile'])) {
-
-    RoleAccess::checkRoleAccessAll();
 
     // Načtení parametrů z URL
     $page = isset($_GET['page']) ? (int) $_GET['page'] : 1;

@@ -2,8 +2,8 @@
 
 namespace Services;
 
+use Database\Database;
 use PDO;
-use Services\Database;
 
 class SessionService
 {

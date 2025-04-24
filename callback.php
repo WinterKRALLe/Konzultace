@@ -51,10 +51,10 @@ try {
     $roles = [];
 
     $groupRoles = [
+        'c35357e8-3f4b-4793-8df5-dfe1894b3ea8' => 'utb_stu', // utb_stu
         '546d5f43-0eb3-4c94-91d5-2c1f82bc1f56' => 'utb_zam', // grp-FAME-users-konzultace
         'c90839a6-36f7-4a82-bc0e-3b113b0d1e58' => 'utb_zam', // utb_zam
-        '3dbfa8fd-25dd-41c5-ba7f-5f43d54c3f17' => 'utb_zam', // utb_zam_fame
-        'c35357e8-3f4b-4793-8df5-dfe1894b3ea8' => 'utb_stu'  // utb_stu
+        '3dbfa8fd-25dd-41c5-ba7f-5f43d54c3f17' => 'utb_zam'  // utb_zam_fame
     ];
 
     foreach ($groups as $group) {
@@ -63,6 +63,11 @@ try {
                 $roles[] = $groupRoles[$group];
             }
         }
+    }
+
+    if (in_array("utb_stu", $roles) && in_array("utb_zam", $roles)) {
+        $roles = array_diff($roles, ["utb_zam"]);
+        $roles = array_values($roles);
     }
 
     $_SESSION['user_profile'] = [
