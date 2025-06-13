@@ -1,0 +1,19 @@
+<svg width="24.000000000000004" height="24.000000000000004" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_1" fill="none">
+   <path id="svg_2" d="m0.00001,12c0,-6.627 5.373,-12 12,-12s12,5.373 12,12s-5.373,12 -12,12a11.95,11.95 0 0 1 -5.637,-1.404l-4.77,1.357a1.25,1.25 0 0 1 -1.544,-1.544l1.356,-4.77a11.95,11.95 0 0 1 -1.405,-5.639m7.5,-2.25c0,0.414 0.336,0.75 0.75,0.75l7.5,0a0.75,0.75 0 0 0 0,-1.5l-7.5,0a0.75,0.75 0 0 0 -0.75,0.75m0.75,3.75a0.75,0.75 0 0 0 0,1.5l4.5,0a0.75,0.75 0 0 0 0,-1.5l-4.5,0z" fill="url(#fluentColorChat280)"/>
+   <path id="svg_3" d="m7.50001,9.75c0,0.414 0.336,0.75 0.75,0.75l7.5,0a0.75,0.75 0 0 0 0,-1.5l-7.5,0a0.75,0.75 0 0 0 -0.75,0.75m0.75,3.75a0.75,0.75 0 0 0 0,1.5l4.5,0a0.75,0.75 0 0 0 0,-1.5l-4.5,0z" fill="url(#fluentColorChat281)"/>
+   <defs transform="translate(-1.99999, -2)">
+    <linearGradient y2="1.67596" y1="0.1875" x2="0.90879" x1="0.03571" id="fluentColorChat280">
+     <stop stop-color="#e53265"/>
+     <stop stop-color="#2fd6b5" offset="1"/>
+    </linearGradient>
+    <linearGradient y2="1.1035" y1="0.0175" x2="0.16233" x1="0.08744" id="fluentColorChat281">
+     <stop stop-color="#ffffff"/>
+     <stop stop-color="#ffffff" offset="1"/>
+    </linearGradient>
+   </defs>
+  </g>
+ </g>
+</svg>

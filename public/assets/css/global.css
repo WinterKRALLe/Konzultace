@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+@layer base {
+    @font-face {
+        font-family: "Exo";
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: optional;
+        src: url("/public/assets/fonts/Exo/Exo-VariableFont_wght.ttf");
+    }
+
+    @font-face {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: optional;
+        src: url("/public/assets/fonts/Poppins/Poppins-Regular.ttf");
+    }
+
+    html {
+        font-family: "Poppins", system-ui, sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .background {
+            background-color: #12161D;
+            background-image: url("../images/bg.svg");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    }
+}
+
+.accent {
+    background-color: #e53265;
+}
+
+.bg-norm {
+    background-color: #16141c;
+}
+
+.bg-weak {
+    background-color: #1e2130;
+}
+
+.bg-strong {
+    background-color: #1a1926;
+}
+
+.bg-dual:nth-child(odd) {
+    background-color: #1e2130;
+}
+
+.bg-dual:nth-child(even) {
+    background-color: #1a1926;
+}
+
+.text-norm {
+    color: white;
+}
+
+.text-weak {
+    color: #979bb0;
+}
+
+.border-color {
+    border-color: #25283a;
+}
+
+:root {
+
+    --accent: #e53265;
+    --accent-hover: #e84774;
+    --accent-hover-alt: #2e0a14;
+    --accent-active: #ea5B84;
+    --accent-focus-visible: rgba(229, 50, 101, .3);
+
+    --border-color: #25283a;
+
+    --bg-norm: #16141c;
+
+    --bg-weak: #1e2130;
+
+    --bg-strong: #1a1926;
+
+    /*dark*/
+    --color-accent: #64b9e4;
+    --color-accent-hover: #8cc8ea;
+
+    --color-accent-muted: #9ed0ed;
+    --color-accent-muted-hover: #79c1e7;
+
+    --color-text-base: #FEFEFE;
+    --color-text-muted: #aeaeae;
+
+    --color-base: #12161d;
+    --color-muted: #282b32;
+
+    --color-fill: #3f4248;
+    --color-fill-secondary: #282b32;
+}
+
+@media (prefers-color-scheme: light) {
+    .background {
+        background-color: #12161D;
+        background-image: url("../images/bg-light.svg");
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+
+}
+
+@media (prefers-color-scheme: dark) {
+    .background {
+        background-color: #12161D;
+        background-image: url("../images/bg.svg");
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+
+}
+
+.font-exo {
+    font-family: "Exo", system-ui, sans-serif;
+}
+
+.button {
+    @apply rounded-lg px-4 py-2 border border-[#2fd6b5] bg-[var(--bg-norm)] transition-all shadow hover:bg-[#16302b]
+}
+
+.button-alt {
+    @apply rounded-lg px-4 py-2 transition-all shadow border bg-[var(--bg-norm)] border-[var(--accent)] hover:border-[var(--accent-hover)] hover:bg-[var(--accent-hover-alt)]
+}
+
+.button-accent {
+    @apply rounded-lg px-4 py-2 transition-all bg-[var(--accent)] hover:bg-[var(--accent-hover)] active:bg-[var(--accent-active)] focus-within:ring-[3px] focus-within:ring-[var(--accent-focus-visible)];
+}
+
+.input {
+    @apply w-full rounded-md border border-zinc-600 shadow-xs py-2 px-3 outline-none bg-slate-200 dark:bg-[var(--color-fill-secondary)]
+}
+
+.label {
+    @apply block text-sm font-medium
+}
+
+.selected {
+    background-color: var(--bg-weak);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 1);
+    z-index: 10;
+}
